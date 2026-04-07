@@ -13,129 +13,126 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0D1423 0%, #1a2332 100%);
+            background: #0D1423;
             color: #e8eaed;
-            line-height: 1.8;
+            line-height: 1.75;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
+        /* Typography System */
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
             font-weight: 900;
-            letter-spacing: -0.02em;
-            margin-bottom: 30px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 40px;
             background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
-        .hero h2 {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 600;
-            color: #b8bfc6;
-            margin-bottom: 20px;
-            max-width: 800px;
-        }
-        
-        .hero h3 {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 400;
-            color: #8a9199;
-            margin-bottom: 40px;
-            max-width: 700px;
-        }
-        
-        .supporting-line {
-            font-size: 1.1rem;
-            color: #00ff87;
-            margin-bottom: 40px;
-            font-weight: 500;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
-            color: #0D1423;
-            padding: 20px 50px;
-            font-size: 1.3rem;
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
             font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 10px 30px rgba(0, 255, 135, 0.3);
-            margin: 10px;
+            color: #00ff87;
+            margin: 80px 0 32px 0;
+            line-height: 1.3;
         }
         
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0, 255, 135, 0.5);
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+            color: #60efff;
+            margin: 48px 0 24px 0;
+            line-height: 1.4;
         }
         
-        .reassurance {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #8a9199;
+        p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            color: #e8eaed;
         }
         
-        /* Content Sections */
+        /* Spacing System */
         .section {
-            padding: 80px 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 80px 0;
         }
         
-        .section h2 {
-            font-size: 2.5rem;
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 0;
+        }
+        
+        /* Pattern Breaks */
+        .one-liner {
+            font-size: clamp(1.5rem, 4vw, 2rem);
             font-weight: 700;
-            margin-bottom: 30px;
             color: #00ff87;
+            margin: 60px 0;
+            line-height: 1.3;
+            text-align: center;
         }
         
-        .section h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-top: 40px;
-            margin-bottom: 20px;
+        .spacer {
+            height: 60px;
+        }
+        
+        .mini-spacer {
+            height: 32px;
+        }
+        
+        /* Components */
+        .highlight-box {
+            background: rgba(0, 255, 135, 0.08);
+            border-left: 4px solid #00ff87;
+            padding: 32px 40px;
+            margin: 48px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .guarantee-box {
+            background: rgba(96, 239, 255, 0.08);
+            border: 2px solid #60efff;
+            padding: 48px;
+            margin: 80px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .guarantee-box h2 {
+            margin-top: 0;
             color: #60efff;
         }
         
-        .section p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            line-height: 1.9;
-        }
-        
-        .section ul {
+        ul {
             list-style: none;
-            margin: 30px 0;
+            margin: 32px 0;
         }
         
-        .section li {
+        li {
             margin-bottom: 20px;
-            padding-left: 30px;
+            padding-left: 32px;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
         }
         
-        .section li:before {
-            content: "✓";
+        li:before {
+            content: "→";
             position: absolute;
             left: 0;
             color: #00ff87;
@@ -143,305 +140,546 @@
             font-size: 1.3rem;
         }
         
-        .highlight-box {
-            background: rgba(0, 255, 135, 0.1);
-            border-left: 4px solid #00ff87;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 8px;
+        /* CTA System */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+            color: #0D1423;
+            padding: 20px 48px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 30px rgba(0, 255, 135, 0.3);
+            text-align: center;
+            display: inline-block;
         }
         
-        .guarantee-box {
-            background: rgba(96, 239, 255, 0.1);
-            border: 2px solid #60efff;
-            padding: 40px;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 255, 135, 0.5);
+        }
+        
+        .cta-wrapper {
+            text-align: center;
             margin: 60px 0;
-            border-radius: 12px;
+        }
+        
+        .reassurance {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #8a9199;
             text-align: center;
         }
         
-        .price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: #00ff87;
-            margin: 20px 0;
+        .price-block {
+            text-align: center;
+            margin: 60px 0;
         }
         
         .old-price {
             text-decoration: line-through;
             color: #8a9199;
             font-size: 1.5rem;
-            margin-right: 20px;
+            display: inline-block;
+            margin-right: 16px;
+        }
+        
+        .price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #00ff87;
+            line-height: 1;
+            display: block;
+            margin: 20px 0;
+        }
+        
+        .price-detail {
+            color: #8a9199;
+            font-size: 1rem;
+            margin-bottom: 32px;
         }
         
         /* Footer */
         .footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 24px;
             color: #8a9199;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Micro Typography */
+        strong {
+            color: #fff;
+            font-weight: 600;
+        }
+        
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #60efff;
         }
     </style>
 </head>
 <body>
-    <!-- HERO SECTION -->
+
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h1>Launch Speed Wins.</h1>
-            <h2>OpenClaw + AI agents built and deployed this page in 90 minutes.</h2>
-            <h3>So you can ship 5 ideas while others plan 1.</h3>
-            <p class="supporting-line">Built. Deployed. Live. No dev team. No waiting.</p>
-            <a href="#offer" class="cta-button">Get FastStart Operator — $27</a>
-            <p class="reassurance">Instant access • 90-min framework • Full refund guarantee</p>
+            
+            <p style="font-size: 1.5rem; color: #b8bfc6; margin-bottom: 20px; line-height: 1.5;">OpenClaw + AI agents built and deployed this entire page in 90 minutes.</p>
+            
+            <p style="font-size: 1.25rem; color: #8a9199; margin-bottom: 48px;">So you can ship 5 ideas while others plan 1.</p>
+            
+            <p style="color: #00ff87; font-weight: 500; margin-bottom: 48px;">Built. Deployed. Live. No dev team. No waiting.</p>
+            
+            <div class="cta-wrapper">
+                <a href="#offer" class="cta-button">Get FastStart Operator — $27</a>
+                <p class="reassurance">Instant access • 90-min framework • Full refund guarantee</p>
+            </div>
         </div>
     </section>
 
-    <!-- OPENING SCENARIO -->
+    <!-- SECTION 1: OPENING SCENARIO -->
     <section class="section">
-        <h2>You Have the Ideas. But Nothing Ships.</h2>
-        
-        <p>You wake up with a killer product idea. A course. A tool. A service. You can already see it: the landing page, the offer, the copy. It's real in your head.</p>
-        
-        <p>So you open a doc. You outline the structure. You research competitors. You draft headlines. You plan the funnel. You sketch wireframes. You bookmark tutorials on Next.js, Vercel, Tailwind, and GitHub.</p>
-        
-        <p>Then reality hits.</p>
-        
-        <p>You're not a developer. Even if you were, building takes days. Weeks. The momentum dies. The idea goes into the "someday" folder with the other 47 projects that never launched.</p>
-        
-        <p>Meanwhile, someone else ships a worse version of your idea. They're running ads. Taking payments. Building a list. And you're still... planning.</p>
-        
-        <h3>The Window Closes Fast</h3>
-        
-        <p>Here's what nobody tells you about online business:</p>
-        
-        <p><strong>Speed is the only edge you have.</strong></p>
-        
-        <p>Not perfection. Not polish. Not a better design. Speed. Because while you're refining version 1.0 in your head, someone else is learning from version 3.0 in the market.</p>
-        
-        <p>They're getting feedback. Iterating. Improving. Making money. And you're still stuck in the builder phase, waiting for the "right time" to launch.</p>
-        
-        <p>The right time was yesterday. The second-best time is today. But only if you can actually ship.</p>
-        
-        <h3>Why Most Creators Stay Stuck</h3>
-        
-        <p>It's not your fault. The tools promised to make this easy. "No-code!" they said. "Anyone can build!" they said. But here's what actually happens:</p>
-        
-        <ul>
-            <li>You spend 6 hours learning a website builder, then realize you need a $200/month plan to remove their branding</li>
-            <li>You try to "just hire a developer" but the quotes come back at $3,000+ and 4-week timelines</li>
-            <li>You attempt to DIY with tutorials, but every stack requires prerequisites you don't have</li>
-            <li>You give up and buy a template, then spend days customizing it, only to find it breaks when you try to deploy</li>
-        </ul>
-        
-        <p>Sound familiar?</p>
-        
-        <p>The problem isn't you. The problem is that <strong>every tool still assumes you have time and technical knowledge.</strong> They're built for developers who can debug. For designers who know CSS. For marketers who can afford to wait.</p>
-        
-        <p>But you don't have time. You don't have a tech team. And you definitely can't afford to wait another month while your idea becomes someone else's launch.</p>
-        
-        <h2>What If You Could Ship Today?</h2>
-        
-        <p>Imagine this instead:</p>
-        
-        <p>You have an idea at 9 AM. By 11 AM, you have a live sales page. Real URL. Real page. Real opportunity to start testing.</p>
-        
-        <p>No dev team. No coding tutorials. No waiting for someone to "get back to you." Just you, OpenClaw, and a 90-minute framework that turns ideas into deployed projects.</p>
-        
-        <p>That's not a fantasy. That's exactly how this page was built. And it's exactly what you're about to learn.</p>
+        <div class="container">
+            <h2>You Have the Ideas. But Nothing Ships.</h2>
+            
+            <p>You wake up with a killer product idea.</p>
+            
+            <p>A course. A tool. A service. You can already see it—the landing page, the offer, the copy. It's real in your head.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>So you open a doc. You outline the structure. You research competitors. You draft headlines. You plan the funnel. You sketch wireframes.</p>
+            
+            <p>You bookmark tutorials on Next.js, Vercel, Tailwind, and GitHub.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>Then reality hits.</p>
+            
+            <div class="spacer"></div>
+            
+            <p>You're not a developer. Even if you were, building takes days. Weeks. The momentum dies.</p>
+            
+            <p>The idea goes into the "someday" folder with the other 47 projects that never launched.</p>
+            
+            <div class="spacer"></div>
+            
+            <p class="one-liner">Meanwhile, someone else ships a worse version of your idea.</p>
+            
+            <div class="spacer"></div>
+            
+            <p>They're running ads. Taking payments. Building a list.</p>
+            
+            <p>And you're still... planning.</p>
+        </div>
     </section>
 
-    <!-- MECHANISM SECTION -->
+    <!-- SECTION 2: PROBLEM EXPANSION -->
     <section class="section">
-        <h2>How OpenClaw Changes the Game</h2>
-        
-        <p>OpenClaw is an AI agent platform that connects your tools, executes commands, and automates deployment workflows.</p>
-        
-        <p>Think of it as a technical co-founder who never sleeps, never charges hourly, and never says "that's not possible."</p>
-        
-        <p>Here's how it works:</p>
-        
-        <div class="highlight-box">
+        <div class="container">
+            <h2>The Window Closes Fast</h2>
+            
+            <p>Here's what nobody tells you about online business:</p>
+            
+            <div class="highlight-box">
+                <p><strong>Speed is the only edge you have.</strong></p>
+            </div>
+            
+            <p>Not perfection. Not polish. Not a better design.</p>
+            
+            <p>Speed.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>Because while you're refining version 1.0 in your head, someone else is learning from version 3.0 in the market.</p>
+            
+            <p>They're getting feedback. Iterating. Improving. Making money.</p>
+            
+            <p>And you're still stuck in the builder phase, waiting for the "right time" to launch.</p>
+            
+            <div class="spacer"></div>
+            
+            <p class="one-liner">The right time was yesterday.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>Why Most Creators Stay Stuck</h3>
+            
+            <p>It's not your fault. The tools promised to make this easy.</p>
+            
+            <p>"No-code!" they said. "Anyone can build!" they said.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>But here's what actually happens:</p>
+            
+            <ul>
+                <li>You spend 6 hours learning a website builder, then realize you need a $200/month plan to remove their branding</li>
+                <li>You try to "just hire a developer" but the quotes come back at $3,000+ and 4-week timelines</li>
+                <li>You attempt to DIY with tutorials, but every stack requires prerequisites you don't have</li>
+                <li>You give up and buy a template, then spend days customizing it, only to find it breaks when you try to deploy</li>
+            </ul>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>Sound familiar?</p>
+            
+            <div class="spacer"></div>
+            
+            <p>The problem isn't you. The problem is that <strong>every tool still assumes you have time and technical knowledge.</strong></p>
+            
+            <p>They're built for developers who can debug. For designers who know CSS. For marketers who can afford to wait.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>But you don't have time. You don't have a tech team.</p>
+            
+            <p>And you definitely can't afford to wait another month while your idea becomes someone else's launch.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: FUTURE VISION -->
+    <section class="section">
+        <div class="container">
+            <h2>What If You Could Ship Today?</h2>
+            
+            <p>Imagine this instead:</p>
+            
+            <div class="spacer"></div>
+            
+            <p>You have an idea at 9 AM.</p>
+            
+            <p>By 11 AM, you have a live sales page. Real URL. Real page. Real opportunity to start testing.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>No dev team. No coding tutorials. No waiting for someone to "get back to you."</p>
+            
+            <p>Just you, OpenClaw, and a 90-minute framework that turns ideas into deployed projects.</p>
+            
+            <div class="spacer"></div>
+            
+            <p class="one-liner">That's not a fantasy. That's exactly how this page was built.</p>
+            
+            <div class="spacer"></div>
+            
+            <p>And it's exactly what you're about to learn.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 4: MECHANISM -->
+    <section class="section">
+        <div class="container">
+            <h2>How OpenClaw Changes the Game</h2>
+            
+            <p>OpenClaw is an AI agent platform that connects your tools, executes commands, and automates deployment workflows.</p>
+            
+            <p>Think of it as a technical co-founder who never sleeps, never charges hourly, and never says "that's not possible."</p>
+            
+            <div class="spacer"></div>
+            
             <h3>The FastStart Operator Framework</h3>
             
-            <p><strong>Step 1: Idea Capture (5 minutes)</strong></p>
-            <p>You define the offer. The audience. The outcome. OpenClaw stores it as structured context.</p>
+            <p>Here's how it works:</p>
             
-            <p><strong>Step 2: Copy Generation (15 minutes)</strong></p>
-            <p>OpenClaw uses trained copywriting skills (yes, actual documented frameworks) to generate headlines, sales copy, and CTAs. No prompt engineering. No "make it sound better." Just structured output.</p>
+            <div class="highlight-box">
+                <p><strong>Step 1: Idea Capture (5 minutes)</strong></p>
+                <p>You define the offer. The audience. The outcome. OpenClaw stores it as structured context.</p>
+                
+                <div class="mini-spacer"></div>
+                
+                <p><strong>Step 2: Copy Generation (15 minutes)</strong></p>
+                <p>OpenClaw uses trained copywriting skills (yes, actual documented frameworks) to generate headlines, sales copy, and CTAs. No prompt engineering. No "make it sound better." Just structured output.</p>
+                
+                <div class="mini-spacer"></div>
+                
+                <p><strong>Step 3: Page Build (20 minutes)</strong></p>
+                <p>OpenClaw writes clean HTML/CSS based on design principles. Mobile-responsive. Fast-loading. No template bloat.</p>
+                
+                <div class="mini-spacer"></div>
+                
+                <p><strong>Step 4: GitHub Push (10 minutes)</strong></p>
+                <p>OpenClaw connects to your GitHub account, creates a repository, commits the code, and pushes to main. All automated.</p>
+                
+                <div class="mini-spacer"></div>
+                
+                <p><strong>Step 5: Vercel Deployment (5 minutes)</strong></p>
+                <p>OpenClaw links the repo to Vercel, triggers a build, and returns a live URL. Your page is now on the internet.</p>
+                
+                <div class="spacer"></div>
+                
+                <p style="color: #00ff87; font-weight: 600; font-size: 1.2rem;">Total time: 55-90 minutes. Total cost: $0 in platform fees. Total coding required: Zero.</p>
+            </div>
             
-            <p><strong>Step 3: Page Build (20 minutes)</strong></p>
-            <p>OpenClaw writes clean HTML/CSS based on design principles. Mobile-responsive. Fast-loading. No template bloat.</p>
+            <div class="spacer"></div>
             
-            <p><strong>Step 4: GitHub Push (10 minutes)</strong></p>
-            <p>OpenClaw connects to your GitHub account, creates a repository, commits the code, and pushes to main. All automated.</p>
+            <h3>Why This Works (When Other Tools Don't)</h3>
             
-            <p><strong>Step 5: Vercel Deployment (5 minutes)</strong></p>
-            <p>OpenClaw links the repo to Vercel, triggers a build, and returns a live URL. Your page is now on the internet.</p>
+            <p>Most AI tools give you generic output and leave you to figure out deployment.</p>
             
-            <p><strong>Total time: 55-90 minutes. Total cost: $0 in platform fees. Total coding required: Zero.</strong></p>
-        </div>
-        
-        <h3>Why This Works (When Other Tools Don't)</h3>
-        
-        <p>Most AI tools give you generic output and leave you to figure out deployment. ChatGPT writes copy, but you still need to build the page. Midjourney creates images, but you still need to code the layout. GitHub and Vercel exist, but you still need to know how to use them.</p>
-        
-        <p>OpenClaw connects the entire workflow. It's not just an AI that answers questions—it's an AI that executes tasks. Push code. Create repos. Deploy sites. Run commands. All from natural language instructions.</p>
-        
-        <p>You don't learn to code. You don't learn Git. You don't learn Vercel. You just learn the FastStart Operator framework. One system. One workflow. Repeatable results.</p>
-        
-        <h3>What You Actually Get</h3>
-        
-        <p>This isn't a course full of theory. It's a documented, executable system:</p>
-        
-        <ul>
-            <li><strong>The 90-Minute Deployment Playbook</strong> - Step-by-step instructions for taking any offer from idea to live page. Includes decision trees for when to use each skill, what to do when something breaks, and how to iterate fast.</li>
+            <p>ChatGPT writes copy, but you still need to build the page. Midjourney creates images, but you still need to code the layout. GitHub and Vercel exist, but you still need to know how to use them.</p>
             
-            <li><strong>Pre-Built OpenClaw Skills</strong> - You get access to the exact skills used to build this page: hero section generator, sales copy framework, deployment automation, and more. Just trigger them with commands like <code>/herosection</code> or <code>/project setup</code>.</li>
+            <div class="mini-spacer"></div>
             
-            <li><strong>GitHub + Vercel Setup Guide</strong> - A 15-minute walkthrough for connecting your accounts. Includes token creation, permission setup, and troubleshooting common errors. Do this once, use it forever.</li>
+            <p>OpenClaw connects the entire workflow.</p>
             
-            <li><strong>Copywriting Framework Library</strong> - Documented structures for headlines, VSLs, email sequences, and sales pages. These aren't vague "write persuasively" prompts—they're structured templates that OpenClaw executes.</li>
+            <p>It's not just an AI that answers questions—it's an AI that executes tasks. Push code. Create repos. Deploy sites. Run commands. All from natural language instructions.</p>
             
-            <li><strong>Deployment Troubleshooting Database</strong> - A searchable collection of every error I've encountered (and fixed) while building with OpenClaw + Vercel. 404s, build failures, GitHub auth issues, all solved.</li>
+            <div class="spacer"></div>
             
-            <li><strong>Live Example Sites</strong> - Access to the source code for 5 deployed projects, including this page. See exactly how the HTML is structured, how the copy flows, and how the deployment config is set up.</li>
+            <p>You don't learn to code. You don't learn Git. You don't learn Vercel.</p>
             
-            <li><strong>Bonus: Iteration Workflow</strong> - How to update, improve, and redeploy pages without breaking production. Version control basics, rollback commands, and A/B testing setups—all in plain English.</li>
-        </ul>
-        
-        <h3>Who This Is For</h3>
-        
-        <p><strong>This is for you if:</strong></p>
-        
-        <ul>
-            <li>You have product ideas but no dev team</li>
-            <li>You've bought courses but never shipped anything</li>
-            <li>You want to test offers before investing in full builds</li>
-            <li>You're tired of waiting weeks for freelancers to deliver</li>
-            <li>You want to own your deployment process</li>
-            <li>You need to move faster than your competition</li>
-        </ul>
-        
-        <p><strong>This is NOT for you if:</strong></p>
-        
-        <ul>
-            <li>You're looking for a "push-button" magic solution (this requires following documented steps)</li>
-            <li>You expect AI to read your mind (you need to define the offer clearly)</li>
-            <li>You want enterprise-scale features (this is for fast MVP launches, not complex apps)</li>
-            <li>You're not willing to spend 90 minutes learning a new workflow</li>
-        </ul>
-    </section>
-
-    <!-- PROOF SECTION -->
-    <section class="section">
-        <h2>This Page Is the Proof</h2>
-        
-        <p>I could show you testimonials. I could show you screenshots. But why? You're reading the proof right now.</p>
-        
-        <p><strong>This entire page was built using the FastStart Operator framework.</strong></p>
-        
-        <ul>
-            <li>Copy generated using the <code>/herosection</code> and <code>salescopy-skill</code></li>
-            <li>HTML structure written by OpenClaw with clean, semantic markup</li>
-            <li>Pushed to GitHub repository: <code>pacinobot2026/test</code></li>
-            <li>Deployed to Vercel: <code>test-pacino-bots-projects.vercel.app</code></li>
-            <li>Total time from concept to live: 90 minutes</li>
-            <li>Total cost: $0 (GitHub free, Vercel free tier, OpenClaw usage covered)</li>
-        </ul>
-        
-        <p>You're not reading theory. You're reading the output of the exact system you're about to learn.</p>
-        
-        <div class="highlight-box">
-            <p><strong>The meta-proof:</strong> If this page convinces you to buy, then you just saw the framework work in real time. If it doesn't, well... you still saw a live page get built and deployed faster than most agencies can send a proposal.</p>
+            <p>You just learn the FastStart Operator framework.</p>
+            
+            <p class="one-liner">One system. One workflow. Repeatable results.</p>
         </div>
     </section>
 
-    <!-- OBJECTION HANDLING -->
+    <!-- SECTION 5: WHAT YOU GET -->
     <section class="section">
-        <h2>What You're Probably Thinking</h2>
-        
-        <h3>"I'm Not Technical Enough"</h3>
-        
-        <p>Neither am I. I'm a marketer who got tired of waiting for developers. This framework was built specifically because I couldn't code my way out of a basic HTML file.</p>
-        
-        <p>If you can copy-paste commands and follow a checklist, you can do this. The playbook is written at a 12-year-old reading level. No jargon. No assumptions.</p>
-        
-        <h3>"I Don't Have Time to Learn Another Tool"</h3>
-        
-        <p>That's fair. But ask yourself: how much time have you already spent researching website builders, watching tutorials, and not shipping?</p>
-        
-        <p>This framework takes 90 minutes to learn and use. After that, you can deploy a new page in under an hour. Compare that to your current timeline.</p>
-        
-        <h3>"What If Something Breaks?"</h3>
-        
-        <p>It will. That's why the troubleshooting database exists. Every error you'll encounter has been documented with the exact fix. GitHub auth fails? Here's the command. Vercel deployment errors? Here's the config. 404s? Here's the routing fix.</p>
-        
-        <p>You're not figuring this out alone. You're following a documented path.</p>
-        
-        <h3>"Can't I Just Use [Insert Tool Here]?"</h3>
-        
-        <p>Sure. You can use Wix, Squarespace, Webflow, Carrd, or any other builder. But then you're locked into their platform, paying monthly fees, limited by their templates, and waiting for their support team when things break.</p>
-        
-        <p>With this framework, you own the code. It's in your GitHub. It's on your Vercel. You control the deployment. You don't pay platform fees. And you can iterate as fast as you want.</p>
-        
-        <h3>"Is This Just for Landing Pages?"</h3>
-        
-        <p>No. The framework works for any static site deployment: landing pages, sales pages, course portals, email capture pages, VSL pages, waitlist pages, thank-you pages, etc.</p>
-        
-        <p>If it can be built with HTML/CSS/JS, it can be deployed with this system. Dynamic apps (databases, user auth, complex backends) require more, but for 90% of creator use cases, this is enough.</p>
-    </section>
-
-    <!-- GUARANTEE SECTION -->
-    <section class="section">
-        <div class="guarantee-box">
-            <h2>The FastStart Guarantee</h2>
+        <div class="container">
+            <h2>What You Actually Get</h2>
             
-            <p>Try the framework for 7 days. Follow the playbook. Build a page. Deploy it. If you don't have a live URL by the end of day 7, or if you just don't think it's worth it, email me. I'll refund every penny.</p>
+            <p>This isn't a course full of theory. It's a documented, executable system:</p>
             
-            <p>No questions. No hoops. No "did you really try?" interrogation. Just a simple refund.</p>
+            <div class="spacer"></div>
             
-            <p>Why? Because I know this works. I'm using it right now. This page is the proof. And I'd rather eat the $27 refund than have you stuck with something that doesn't deliver.</p>
+            <h3>1. The 90-Minute Deployment Playbook</h3>
+            <p>Step-by-step instructions for taking any offer from idea to live page. Includes decision trees for when to use each skill, what to do when something breaks, and how to iterate fast.</p>
+            
+            <h3>2. Pre-Built OpenClaw Skills</h3>
+            <p>You get access to the exact skills used to build this page: hero section generator, sales copy framework, deployment automation, and more. Just trigger them with commands like <code>/herosection</code> or <code>/project setup</code>.</p>
+            
+            <h3>3. GitHub + Vercel Setup Guide</h3>
+            <p>A 15-minute walkthrough for connecting your accounts. Includes token creation, permission setup, and troubleshooting common errors. Do this once, use it forever.</p>
+            
+            <h3>4. Copywriting Framework Library</h3>
+            <p>Documented structures for headlines, VSLs, email sequences, and sales pages. These aren't vague "write persuasively" prompts—they're structured templates that OpenClaw executes.</p>
+            
+            <h3>5. Deployment Troubleshooting Database</h3>
+            <p>A searchable collection of every error I've encountered (and fixed) while building with OpenClaw + Vercel. 404s, build failures, GitHub auth issues, all solved.</p>
+            
+            <h3>6. Live Example Sites</h3>
+            <p>Access to the source code for 5 deployed projects, including this page. See exactly how the HTML is structured, how the copy flows, and how the deployment config is set up.</p>
+            
+            <h3>7. Bonus: Iteration Workflow</h3>
+            <p>How to update, improve, and redeploy pages without breaking production. Version control basics, rollback commands, and A/B testing setups—all in plain English.</p>
         </div>
     </section>
 
-    <!-- FINAL CTA SECTION -->
+    <!-- SECTION 6: WHO THIS IS FOR -->
+    <section class="section">
+        <div class="container">
+            <h2>Who This Is For</h2>
+            
+            <p><strong>This is for you if:</strong></p>
+            
+            <ul>
+                <li>You have product ideas but no dev team</li>
+                <li>You've bought courses but never shipped anything</li>
+                <li>You want to test offers before investing in full builds</li>
+                <li>You're tired of waiting weeks for freelancers to deliver</li>
+                <li>You want to own your deployment process</li>
+                <li>You need to move faster than your competition</li>
+            </ul>
+            
+            <div class="spacer"></div>
+            
+            <p><strong>This is NOT for you if:</strong></p>
+            
+            <ul>
+                <li>You're looking for a "push-button" magic solution (this requires following documented steps)</li>
+                <li>You expect AI to read your mind (you need to define the offer clearly)</li>
+                <li>You want enterprise-scale features (this is for fast MVP launches, not complex apps)</li>
+                <li>You're not willing to spend 90 minutes learning a new workflow</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SECTION 7: PROOF -->
+    <section class="section">
+        <div class="container">
+            <h2>This Page Is the Proof</h2>
+            
+            <p>I could show you testimonials. I could show you screenshots.</p>
+            
+            <p>But why?</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p class="one-liner">You're reading the proof right now.</p>
+            
+            <div class="spacer"></div>
+            
+            <p><strong>This entire page was built using the FastStart Operator framework.</strong></p>
+            
+            <ul>
+                <li>Copy generated using the <code>/herosection</code> and <code>salescopy-skill</code></li>
+                <li>HTML structure written by OpenClaw with clean, semantic markup</li>
+                <li>Pushed to GitHub repository: <code>pacinobot2026/test</code></li>
+                <li>Deployed to Vercel: <code>test-pacino-bots-projects.vercel.app</code></li>
+                <li>Total time from concept to live: 90 minutes</li>
+                <li>Total cost: $0 (GitHub free, Vercel free tier, OpenClaw usage covered)</li>
+            </ul>
+            
+            <div class="spacer"></div>
+            
+            <p>You're not reading theory. You're reading the output of the exact system you're about to learn.</p>
+            
+            <div class="highlight-box">
+                <p><strong>The meta-proof:</strong> If this page convinces you to buy, then you just saw the framework work in real time. If it doesn't, well... you still saw a live page get built and deployed faster than most agencies can send a proposal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: OBJECTION HANDLING -->
+    <section class="section">
+        <div class="container">
+            <h2>What You're Probably Thinking</h2>
+            
+            <h3>"I'm Not Technical Enough"</h3>
+            <p>Neither am I. I'm a marketer who got tired of waiting for developers. This framework was built specifically because I couldn't code my way out of a basic HTML file.</p>
+            <p>If you can copy-paste commands and follow a checklist, you can do this. The playbook is written at a 12-year-old reading level. No jargon. No assumptions.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"I Don't Have Time to Learn Another Tool"</h3>
+            <p>That's fair. But ask yourself: how much time have you already spent researching website builders, watching tutorials, and not shipping?</p>
+            <p>This framework takes 90 minutes to learn and use. After that, you can deploy a new page in under an hour. Compare that to your current timeline.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"What If Something Breaks?"</h3>
+            <p>It will. That's why the troubleshooting database exists. Every error you'll encounter has been documented with the exact fix.</p>
+            <p>GitHub auth fails? Here's the command. Vercel deployment errors? Here's the config. 404s? Here's the routing fix.</p>
+            <p>You're not figuring this out alone. You're following a documented path.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"Can't I Just Use [Insert Tool Here]?"</h3>
+            <p>Sure. You can use Wix, Squarespace, Webflow, Carrd, or any other builder. But then you're locked into their platform, paying monthly fees, limited by their templates, and waiting for their support team when things break.</p>
+            <p>With this framework, you own the code. It's in your GitHub. It's on your Vercel. You control the deployment. You don't pay platform fees. And you can iterate as fast as you want.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"Is This Just for Landing Pages?"</h3>
+            <p>No. The framework works for any static site deployment: landing pages, sales pages, course portals, email capture pages, VSL pages, waitlist pages, thank-you pages, etc.</p>
+            <p>If it can be built with HTML/CSS/JS, it can be deployed with this system. Dynamic apps (databases, user auth, complex backends) require more, but for 90% of creator use cases, this is enough.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"I've Bought Courses Before and Never Finished"</h3>
+            <p>This isn't a 40-module video course. It's a playbook. A checklist. A system you execute, not consume.</p>
+            <p>You're not "learning" for weeks. You're deploying in 90 minutes. The first time you follow the framework, you have a live page. That's the win. Everything after that is repetition.</p>
+            
+            <div class="spacer"></div>
+            
+            <h3>"What If I Don't Have an Audience?"</h3>
+            <p>That's fine. This framework is about building assets, not traffic generation. Once you have a live page, you can test it with $20 in ads, post it in relevant communities, or use it as a portfolio piece.</p>
+            <p>The hard part is building. This solves that. Traffic is a separate skill—but you can't drive traffic to nothing.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 9: GUARANTEE -->
+    <section class="section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>The FastStart Guarantee</h2>
+                
+                <div class="spacer"></div>
+                
+                <p>Try the framework for 7 days. Follow the playbook. Build a page. Deploy it.</p>
+                
+                <p>If you don't have a live URL by the end of day 7, or if you just don't think it's worth it, email me.</p>
+                
+                <p>I'll refund every penny.</p>
+                
+                <div class="mini-spacer"></div>
+                
+                <p>No questions. No hoops. No "did you really try?" interrogation. Just a simple refund.</p>
+                
+                <div class="spacer"></div>
+                
+                <p>Why? Because I know this works. I'm using it right now. This page is the proof.</p>
+                
+                <p>And I'd rather eat the $27 refund than have you stuck with something that doesn't deliver.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FINAL CTA -->
     <section class="section" id="offer">
-        <h2>Here's What Happens Next</h2>
-        
-        <p>You click the button below. You get instant access to:</p>
-        
-        <ul>
-            <li>The 90-Minute Deployment Playbook (PDF + video walkthrough)</li>
-            <li>Pre-Built OpenClaw Skills (installable with one command)</li>
-            <li>GitHub + Vercel Setup Guide (15-minute setup)</li>
-            <li>Copywriting Framework Library (hero sections, VSLs, emails, sales pages)</li>
-            <li>Deployment Troubleshooting Database (searchable error fixes)</li>
-            <li>5 Live Example Sites (full source code access)</li>
-            <li>Bonus: Iteration Workflow Guide (version control, rollbacks, A/B testing)</li>
-        </ul>
-        
-        <p>You follow the setup guide. 15 minutes. Connect GitHub. Connect Vercel. Done.</p>
-        
-        <p>You pick an offer. Any offer. Course, tool, service, whatever. You run through the playbook. 90 minutes later, you have a live page.</p>
-        
-        <p>You test. You iterate. You improve. And most importantly: <strong>you ship.</strong></p>
-        
-        <div style="text-align: center; margin: 60px 0;">
-            <p class="old-price">$97</p>
-            <p class="price">$27</p>
-            <p style="color: #8a9199; margin-bottom: 40px;">One-time payment. Instant access. No subscription.</p>
-            <a href="#" class="cta-button">Get FastStart Operator Now</a>
-            <p class="reassurance">Instant access • 90-min framework • 7-day refund guarantee • No subscription</p>
+        <div class="container">
+            <h2>Here's What Happens Next</h2>
+            
+            <p>You click the button below. You get instant access to:</p>
+            
+            <ul>
+                <li>The 90-Minute Deployment Playbook (PDF + video walkthrough)</li>
+                <li>Pre-Built OpenClaw Skills (installable with one command)</li>
+                <li>GitHub + Vercel Setup Guide (15-minute setup)</li>
+                <li>Copywriting Framework Library (hero sections, VSLs, emails, sales pages)</li>
+                <li>Deployment Troubleshooting Database (searchable error fixes)</li>
+                <li>5 Live Example Sites (full source code access)</li>
+                <li>Bonus: Iteration Workflow Guide (version control, rollbacks, A/B testing)</li>
+            </ul>
+            
+            <div class="spacer"></div>
+            
+            <p>You follow the setup guide. 15 minutes. Connect GitHub. Connect Vercel. Done.</p>
+            
+            <p>You pick an offer. Any offer. Course, tool, service, whatever. You run through the playbook.</p>
+            
+            <p>90 minutes later, you have a live page.</p>
+            
+            <div class="mini-spacer"></div>
+            
+            <p>You test. You iterate. You improve.</p>
+            
+            <p class="one-liner">And most importantly: you ship.</p>
+            
+            <div class="spacer"></div>
+            
+            <div class="price-block">
+                <span class="old-price">$97</span>
+                <span class="price">$27</span>
+                <p class="price-detail">One-time payment. Instant access. No subscription.</p>
+                
+                <a href="#" class="cta-button">Get FastStart Operator Now</a>
+                
+                <p class="reassurance">Instant access • 90-min framework • 7-day refund guarantee • No subscription</p>
+            </div>
+            
+            <div class="spacer"></div>
+            
+            <p style="text-align: center; font-size: 0.95rem; color: #8a9199;">This is a limited launch offer. Price goes to $97 after 100 sales. Current count: 23/100.</p>
         </div>
-        
-        <p style="text-align: center; font-size: 0.9rem; color: #8a9199; margin-top: 40px;">This is a limited launch offer. Price goes to $97 after 100 sales. Current count: 23/100.</p>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>Built with OpenClaw • Deployed to Vercel • Live in minutes</p>
-        <p style="margin-top: 10px; font-size: 0.85rem;">© 2026 FastStart Operator. All rights reserved.</p>
-        <p style="margin-top: 20px; font-size: 0.85rem;">Questions? Email: support@faststartoperator.com</p>
+        <div class="container">
+            <p>Built with OpenClaw • Deployed to Vercel • Live in minutes</p>
+            <div class="mini-spacer"></div>
+            <p>© 2026 FastStart Operator. All rights reserved.</p>
+            <div class="mini-spacer"></div>
+            <p>Questions? Email: support@faststartoperator.com</p>
+        </div>
     </footer>
+
 </body>
 </html>
