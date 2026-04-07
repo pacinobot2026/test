@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastStart Operator - Launch Speed Wins</title>
+    <title>FastStart Operator - You're Already Too Slow</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
         
         body {
-            font-family: Georgia, 'Times New Roman', serif;
+            font-family: Georgia, 'Palatino Linotype', serif;
             background: #fafafa;
             color: #2d2d2d;
             line-height: 1.65;
@@ -22,81 +22,102 @@
         .page {
             max-width: 700px;
             margin: 0 auto;
-            background: #fff;
-            padding: 60px 40px;
+            padding: 60px 40px 120px;
         }
         
         @media (max-width: 768px) {
             .page {
-                padding: 40px 24px;
+                padding: 40px 24px 80px;
             }
-            body {
-                font-size: 17px;
-            }
+        }
+        
+        /* Hero 3-Part Headline */
+        .hero {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            color: #000;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero .mechanism {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4a5568;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        .hero .outcome {
+            font-size: 20px;
+            font-weight: 400;
+            color: #718096;
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+        
+        .hero .proof {
+            font-size: 16px;
+            color: #a0aec0;
+            font-style: italic;
+            margin-bottom: 48px;
         }
         
         /* Typography */
-        h1 {
-            font-size: 42px;
-            font-weight: 900;
-            color: #000;
-            margin-bottom: 16px;
-            line-height: 1.2;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
         h2 {
             font-size: 32px;
             font-weight: 700;
             color: #000;
             margin-top: 48px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             line-height: 1.3;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
         
         h3 {
             font-size: 24px;
             font-weight: 600;
-            color: #1a1a1a;
+            color: #2d3748;
             margin-top: 36px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             line-height: 1.4;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
         
         p {
             margin-bottom: 16px;
-        }
-        
-        p + p {
-            margin-top: 0;
+            line-height: 1.65;
         }
         
         strong {
-            font-weight: 700;
+            font-weight: 600;
             color: #000;
-        }
-        
-        em {
-            font-style: italic;
         }
         
         /* Lists */
         ul {
-            margin: 20px 0 20px 24px;
+            margin: 24px 0 24px 40px;
         }
         
         li {
             margin-bottom: 12px;
+            line-height: 1.65;
         }
         
         /* Callouts */
         .callout {
-            background: #f0f9ff;
-            border-left: 4px solid #0284c7;
+            background: #f7fafc;
+            border-left: 4px solid #16a34a;
             padding: 24px;
             margin: 32px 0;
+        }
+        
+        .callout p {
+            margin-bottom: 12px;
         }
         
         .callout p:last-child {
@@ -105,10 +126,14 @@
         
         .guarantee {
             background: #fef3c7;
-            border: 3px solid #f59e0b;
-            padding: 32px;
+            border: 2px solid #f59e0b;
+            padding: 40px;
             margin: 48px 0;
             text-align: center;
+        }
+        
+        .guarantee h2 {
+            margin-top: 0;
         }
         
         /* CTA */
@@ -122,11 +147,10 @@
             background: #16a34a;
             color: #fff;
             padding: 18px 48px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 6px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            border-radius: 8px;
             transition: background 0.2s;
         }
         
@@ -135,7 +159,7 @@
         }
         
         .price {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 900;
             color: #16a34a;
             margin: 20px 0;
@@ -143,21 +167,14 @@
         
         .old-price {
             text-decoration: line-through;
-            color: #999;
+            color: #9ca3af;
             font-size: 24px;
         }
         
         .subtext {
-            color: #666;
+            color: #6b7280;
             font-size: 15px;
-            margin-top: 12px;
-        }
-        
-        /* Divider */
-        .divider {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 48px 0;
+            margin-top: 16px;
         }
         
         /* Footer */
@@ -165,24 +182,31 @@
             text-align: center;
             padding-top: 48px;
             border-top: 1px solid #ddd;
-            color: #666;
+            color: #9ca3af;
             font-size: 14px;
+        }
+        
+        .footer p {
+            margin-bottom: 12px;
         }
     </style>
 </head>
 <body>
     <div class="page">
         
-        <h1>Launch Speed Wins.</h1>
-        
-        <p style="font-size: 22px; color: #555; margin-bottom: 32px;">OpenClaw + AI agents built and deployed this entire page in 90 minutes. So you can ship 5 ideas while others plan 1.</p>
-        
-        <div class="cta">
-            <a href="#offer" class="btn">Get FastStart Operator — $27</a>
-            <p class="subtext">Instant access • 90-min framework • Full refund guarantee</p>
+        <div class="hero">
+            <h1>You're Already Too Slow.</h1>
+            <p class="mechanism">An AI agent built and deployed this entire page in 90 minutes.</p>
+            <p class="outcome">So you can ship 5 ideas while others plan 1.</p>
+            <p class="proof">Built. Deployed. Revenue-ready. While you read this.</p>
+            
+            <div class="cta">
+                <a href="#offer" class="btn">Get FastStart Operator — $27</a>
+                <p class="subtext">Instant access • 90-min framework • 7-day guarantee</p>
+            </div>
         </div>
         
-        <hr class="divider">
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 48px 0;">
         
         <h2>You Have the Ideas. But Nothing Ships.</h2>
         
@@ -233,7 +257,7 @@
         
         <p>No dev team. No coding tutorials. No waiting for someone to "get back to you." Just you, OpenClaw, and a 90-minute framework that turns ideas into deployed projects.</p>
         
-        <p>That's not a fantasy. <strong>That's exactly how this page was built.</strong> And it's exactly what you're about to learn.</p>
+        <p><strong>That's not a fantasy. That's exactly how this page was built.</strong> And it's exactly what you're about to learn.</p>
         
         <h2>How OpenClaw Changes the Game</h2>
         
@@ -242,7 +266,7 @@
         <p>Here's how it works:</p>
         
         <div class="callout">
-            <p><strong>The FastStart Operator Framework</strong></p>
+            <p style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">The FastStart Operator Framework</p>
             
             <p><strong>Step 1: Idea Capture (5 minutes)</strong><br>
             You define the offer. The audience. The outcome. OpenClaw stores it as structured context.</p>
@@ -272,13 +296,11 @@
         
         <h2>What You Actually Get</h2>
         
-        <p>This isn't a course full of theory. It's a documented, executable system:</p>
-        
         <h3>1. The 90-Minute Deployment Playbook</h3>
         <p>Step-by-step instructions for taking any offer from idea to live page. Includes decision trees, troubleshooting guides, and iteration workflows.</p>
         
         <h3>2. Pre-Built OpenClaw Skills</h3>
-        <p>The exact skills used to build this page: hero section generator, sales copy framework, deployment automation. Just trigger them with commands like <code>/herosection</code>.</p>
+        <p>The exact skills used to build this page: hero section generator, sales copy framework, deployment automation. Just trigger them with commands.</p>
         
         <h3>3. GitHub + Vercel Setup Guide</h3>
         <p>A 15-minute walkthrough for connecting your accounts. Includes token creation, permission setup, and common error fixes. Do this once, use it forever.</p>
@@ -290,7 +312,7 @@
         <p>A searchable collection of every error I've fixed while building with OpenClaw + Vercel. 404s, build failures, GitHub auth issues, all solved.</p>
         
         <h3>6. Live Example Sites</h3>
-        <p>Access to the source code for 5 deployed projects, including this page. See exactly how the HTML is structured and how the deployment config works.</p>
+        <p>Access to the source code for 5 deployed projects, including this page. See exactly how everything works.</p>
         
         <h3>7. Bonus: Iteration Workflow</h3>
         <p>How to update and redeploy pages without breaking production. Version control basics, rollback commands, and A/B testing setups—all in plain English.</p>
@@ -324,11 +346,11 @@
         <p>This entire page was built using the FastStart Operator framework:</p>
         
         <ul>
-            <li>Copy generated using <code>/herosection</code> and <code>salescopy-skill</code></li>
-            <li>HTML structure written by OpenClaw with clean markup</li>
-            <li>Pushed to GitHub repository: pacinobot2026/test</li>
-            <li>Deployed to Vercel: test-pacino-bots-projects.vercel.app</li>
-            <li>Total time from concept to live: 90 minutes</li>
+            <li>Copy generated using /herosection and salescopy-skill</li>
+            <li>HTML structure written by OpenClaw</li>
+            <li>Pushed to GitHub: pacinobot2026/test</li>
+            <li>Deployed to Vercel</li>
+            <li>Total time: 90 minutes</li>
             <li>Total cost: $0</li>
         </ul>
         
@@ -337,28 +359,28 @@
         <h2>What You're Probably Thinking</h2>
         
         <h3>"I'm Not Technical Enough"</h3>
-        <p>Neither am I. This framework was built because I couldn't code. If you can copy-paste commands and follow a checklist, you can do this. The playbook is written at a 12-year-old reading level.</p>
+        <p>Neither am I. This framework was built because I couldn't code. If you can copy-paste commands and follow a checklist, you can do this.</p>
         
         <h3>"I Don't Have Time to Learn Another Tool"</h3>
-        <p>How much time have you already spent researching website builders and not shipping? This framework takes 90 minutes to learn and use. After that, you can deploy in under an hour.</p>
+        <p>How much time have you already spent researching website builders and not shipping? This framework takes 90 minutes to learn. After that, you can deploy in under an hour.</p>
         
         <h3>"What If Something Breaks?"</h3>
-        <p>It will. That's why the troubleshooting database exists. Every error has been documented with the exact fix. GitHub auth fails? Here's the command. Vercel errors? Here's the config.</p>
+        <p>It will. That's why the troubleshooting database exists. Every error has been documented with the exact fix.</p>
         
         <h3>"Can't I Just Use [Insert Tool Here]?"</h3>
-        <p>Sure. You can use Wix, Squarespace, Webflow, or Carrd. But then you're locked into their platform, paying monthly fees, limited by templates, and waiting for support when things break. With this framework, you own the code. You control the deployment. No platform fees.</p>
+        <p>Sure. But then you're locked into their platform, paying monthly fees, limited by templates. With this framework, you own the code. You control the deployment. No platform fees.</p>
         
         <h3>"Is This Just for Landing Pages?"</h3>
-        <p>No. The framework works for any static site: landing pages, sales pages, course portals, email capture pages, VSL pages, waitlist pages, thank-you pages. If it can be built with HTML/CSS/JS, it can be deployed with this system.</p>
+        <p>No. The framework works for any static site: landing pages, sales pages, course portals, email capture, VSL pages, waitlist pages, thank-you pages.</p>
         
         <h3>"I've Bought Courses Before and Never Finished"</h3>
-        <p>This isn't a 40-module video course. It's a playbook. A system you execute, not consume. The first time you follow it, you have a live page. That's the win.</p>
+        <p>This isn't a 40-module video course. It's a playbook. A system you execute, not consume. The first time you follow it, you have a live page.</p>
         
         <h3>"What If I Don't Have an Audience?"</h3>
-        <p>This framework is about building assets, not traffic generation. Once you have a live page, you can test it with $20 in ads or post it in communities. But you can't drive traffic to nothing.</p>
+        <p>This framework is about building assets, not traffic generation. Once you have a live page, you can test with $20 in ads or post in communities.</p>
         
         <div class="guarantee">
-            <h2 style="margin-top: 0;">The FastStart Guarantee</h2>
+            <h2>The FastStart Guarantee</h2>
             
             <p>Try the framework for 7 days. Follow the playbook. Build a page. Deploy it.</p>
             
@@ -372,13 +394,13 @@
         <p>You click the button below. You get instant access to:</p>
         
         <ul>
-            <li>The 90-Minute Deployment Playbook (PDF + video)</li>
-            <li>Pre-Built OpenClaw Skills (one-command install)</li>
-            <li>GitHub + Vercel Setup Guide (15-minute setup)</li>
-            <li>Copywriting Framework Library (all templates)</li>
-            <li>Deployment Troubleshooting Database (all fixes)</li>
-            <li>5 Live Example Sites (full source code)</li>
-            <li>Bonus: Iteration Workflow Guide (version control, rollbacks)</li>
+            <li>The 90-Minute Deployment Playbook</li>
+            <li>Pre-Built OpenClaw Skills</li>
+            <li>GitHub + Vercel Setup Guide</li>
+            <li>Copywriting Framework Library</li>
+            <li>Deployment Troubleshooting Database</li>
+            <li>5 Live Example Sites</li>
+            <li>Bonus: Iteration Workflow Guide</li>
         </ul>
         
         <p>You follow the setup guide. 15 minutes. Connect GitHub. Connect Vercel. Done.</p>
@@ -390,21 +412,19 @@
         <div class="cta">
             <p class="old-price">$97</p>
             <p class="price">$27</p>
-            <p style="color: #666; margin-bottom: 32px;">One-time payment. Instant access. No subscription.</p>
+            <p style="color: #6b7280; margin-bottom: 32px;">One-time payment. Instant access. No subscription.</p>
             
             <a href="#" class="btn">Get FastStart Operator Now</a>
             
             <p class="subtext">Instant access • 90-min framework • 7-day refund guarantee • No subscription</p>
         </div>
         
-        <p style="text-align: center; color: #999; font-size: 15px; margin-top: 32px;">Limited launch offer. Price goes to $97 after 100 sales. Current: 23/100.</p>
-        
-        <hr class="divider">
+        <p style="text-align: center; color: #9ca3af; font-size: 14px; margin-top: 48px;">Limited launch offer. Price goes to $97 after 100 sales. Current: 23/100.</p>
         
         <div class="footer">
             <p>Built with OpenClaw • Deployed to Vercel • Live in minutes</p>
-            <p style="margin-top: 16px;">© 2026 FastStart Operator. All rights reserved.</p>
-            <p style="margin-top: 16px;">Questions? Email: support@faststartoperator.com</p>
+            <p>© 2026 FastStart Operator. All rights reserved.</p>
+            <p>Questions? Email: support@faststartoperator.com</p>
         </div>
         
     </div>
